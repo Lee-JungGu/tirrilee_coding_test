@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
   },
   password: {
     type: String,
-    minlength: 8,
+    minlength: 7,
   },
   lastname: {
     type: String,
