@@ -39,7 +39,9 @@ function LoginPage(props) {
   return (
     <Warpper>
       <Logo>
-        <LogoImg src="/images/icon/logo@3x.png" />
+        <Link to="/">
+          <LogoImg src="/images/icon/logo@3x.png" />
+        </Link>
       </Logo>
       <Form onSubmit={onSubmitHandler} onKeyDown={onKeyDownHandler}>
         <Input

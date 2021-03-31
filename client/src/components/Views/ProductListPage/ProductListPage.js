@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Products from "../Products/Products";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ProductListPage() {
   const [products, setProducts] = useState([]);
@@ -77,7 +78,12 @@ export default function ProductListPage() {
           </List>
 
           <List>
-            <NavIcon src="/images/icon/mypage@2x.png" alt="마이페이지아이콘" />
+            <Link to="/login">
+              <NavIcon
+                src="/images/icon/mypage@2x.png"
+                alt="마이페이지아이콘"
+              />
+            </Link>
             <NavText>마이페이지</NavText>
           </List>
         </UnOrderList>
