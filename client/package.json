@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postinstall": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix clinet"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix clinet"
   },
   "eslintConfig": {
     "extends": [
