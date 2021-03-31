@@ -100,8 +100,19 @@ app.post("/api/product/get", (req, res) => {
   });
 });
 
-const port = 5000;
+if (process.env.NODE_ENV === "production") {
+  //Set static folder
+  //All the javascript and css files will be read and served from this folder
+  app.use(express.static("client/build"));
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+  // index.html for all page routes
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
+
+  const port = process.env.PROT || 5000;
+
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+}
