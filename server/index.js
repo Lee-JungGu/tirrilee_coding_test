@@ -21,7 +21,7 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
   })
-  .then(() => console.log("MonggoDB Connected..."))
+  .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
 app.post("/api/users/register", (req, res) => {
