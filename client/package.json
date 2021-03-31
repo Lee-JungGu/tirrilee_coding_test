@@ -16,7 +16,9 @@
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.2",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "http-proxy-middleware": "^1.1.0"
+
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +27,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix clinet"
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix clinet"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "http-proxy-middleware": "^1.1.0"
+    "gh-pages": "^3.1.0"
   }
 }
