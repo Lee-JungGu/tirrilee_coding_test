@@ -11,7 +11,7 @@
     "starts": "node ./server/index.js",
     "backend": "nodemon ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run starts\" \"npm run start --prefix client\""
+    "start": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "author": "JungGu-Lee",
   "license": "ISC",
