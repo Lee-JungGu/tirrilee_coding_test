@@ -3,6 +3,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const { User } = require("./models/User");
+const { Product } = require("./models/Product");
 const { auth } = require("./middleware/auth");
 const config = require("./config/key");
 
@@ -22,10 +23,6 @@ mongoose
   })
   .then(() => console.log("MonggoDB Connected..."))
   .catch((err) => console.log(err));
-
-app.get("/", (req, res) => {
-  res.send("Hello World~!");
-});
 
 app.post("/api/users/register", (req, res) => {
   //회원 가입 할때 필요한 정보들을 client에서 가져오면
@@ -85,6 +82,21 @@ app.get("/api/users/logout", auth, (req, res) => {
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
     if (err) return res.json({ success: false, err });
     return res.status(200).send({ success: true });
+  });
+});
+
+app.post("/api/product/add", (req, res) => {
+  const product = new Product(req.body);
+  product.save((err, productInfo) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).json({ success: true });
+  });
+});
+
+app.post("/api/product/get", (req, res) => {
+  Product.find((err, productInfo) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).json({ productInfo });
   });
 });
 
