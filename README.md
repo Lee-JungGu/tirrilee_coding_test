@@ -9,3 +9,5 @@ express, monggoDB, redux, styled-component 등 처음 사용해보는 것들이�
 
 여러 영상과 구글링을 통해 구현한 부분이 많아 구현한 모든 것이 저의 실력이라고는 할 수 없지만 앞으로 발전 가능성을 봐주셨으면 좋겠습니다.
 결과에 상관없이 이렇게 좋은 경험을 하게 해주셔서 정말 감사드립니다.
+
+https://tirrilee-coding-test.herokuapp.com/#/
