@@ -228,6 +228,7 @@ const Warpper = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: center;
 `;
 
 const Form = styled.form`
@@ -242,6 +243,7 @@ const BeforeButton = styled.button`
   height: 24px;
   margin-top: 16px;
   margin-bottom: 44px;
+  cursor: pointer;
 `;
 
 const ArrowImg = styled.img`
@@ -267,8 +269,7 @@ const SubLabel = styled.label`
 `;
 
 const Input = styled.input`
-  //padding-left만큼 width값 조정
-  width: 96.55172413793103%;
+  width: 100%;
   height: 48px;
   padding-left: 12px;
   font-size: 14px;
@@ -308,6 +309,7 @@ const NextButton = styled.button`
   text-align: center;
   position: fixed;
   bottom: 24px;
+  cursor: pointer;
 
   background-color: ${(props) => props.backgroundColor || "#eaeaea"};
   border-color: ${(props) => props.borderColor || "#eaeaea"};

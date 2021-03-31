@@ -100,7 +100,6 @@ const Input = styled.input`
   width: 100%;
   height: 48px;
   padding-left: 12px;
-  box-sizing: border-box;
   font-size: 14px;
   border: 1px solid #eaeaea;
   border-radius: 8px;
@@ -120,6 +119,7 @@ const LoginButton = styled.button`
   font-size: 15px;
   font-weight: 500;
   text-align: center;
+  cursor: pointer;
 
   margin-top: ${(props) => props.marginTop || "0"};
   background-color: ${(props) => props.backgroundColor || "#226bef"};

@@ -27,4 +27,5 @@ h6 {
 button,
 input {
   all: unset;
+  box-sizing: border-box;
 }
