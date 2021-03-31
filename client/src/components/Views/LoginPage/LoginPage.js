@@ -97,10 +97,10 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  //padding-left만큼 width값 조정
-  width: 96.55172413793103%;
+  width: 100%;
   height: 48px;
   padding-left: 12px;
+  box-sizing: border-box;
   font-size: 14px;
   border: 1px solid #eaeaea;
   border-radius: 8px;
