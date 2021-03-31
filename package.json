@@ -8,11 +8,10 @@
     "npm": "6.14.8"
   },
   "scripts": {
-    "start": "node ./server/index.js",
+    "starts": "node ./server/index.js",
     "backend": "nodemon ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
-    "heroku-postbuild": "npm run build --prefix clinet"
+    "start": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
   },
   "author": "JungGu-Lee",
   "license": "ISC",

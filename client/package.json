@@ -20,12 +20,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env NODE_PATH=src react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix clinet"
   },
   "eslintConfig": {
     "extends": [
