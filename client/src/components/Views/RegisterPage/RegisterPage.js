@@ -230,6 +230,7 @@ const Warpper = styled.div`
   display: flex;
   justify-content: center;
   position: fiexd;
+  top: 0;
 `;
 
 const Form = styled.form`

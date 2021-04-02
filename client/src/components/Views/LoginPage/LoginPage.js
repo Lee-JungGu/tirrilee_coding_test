@@ -78,6 +78,7 @@ const Warpper = styled.div`
   flex-direction: column;
   background-color: #fcfcfc;
   position: fiexd;
+  top: 0;
 `;
 
 const Logo = styled.h1`
