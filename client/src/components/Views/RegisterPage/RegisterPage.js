@@ -229,7 +229,7 @@ const Warpper = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  position: fiexd;
 `;
 
 const Form = styled.form`
