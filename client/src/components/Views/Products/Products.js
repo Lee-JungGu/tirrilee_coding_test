@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import "../../../index.css";
 
 function Products({ type, name, rating, price, image }) {
+  useEffect(() => {
+    const hideRatingImg = (target, targetRating) => {
+      if (rating === targetRating) {
+        target.forEach((rate) => {
+          rate.classList.add("hide");
+        });
+      }
+    };
+
+    const drawRating = () => {
+      const rating4 = document.querySelectorAll(".rating4");
+      const rating3 = document.querySelectorAll(".rating3");
+      const rating2 = document.querySelectorAll(".rating2");
+      const rating1 = document.querySelectorAll(".rating1");
+
+      hideRatingImg(rating4, "4");
+      hideRatingImg(rating3, "3");
+      hideRatingImg(rating2, "2");
+      hideRatingImg(rating1, "1");
+    };
+    drawRating();
+  }, [rating]);
+
   return (
     <>
       <Product>
@@ -37,7 +61,7 @@ function Products({ type, name, rating, price, image }) {
                 alt="별이미지"
               />
               <RatingImg
-                className="rating5 rating4 rating3 rating2 rating1"
+                className="rating4 rating3 rating2 rating1"
                 src="/images/icon/rating_color.png"
                 alt="별이미지"
               />
@@ -69,7 +93,7 @@ const LikeImg = styled.img`
   position: absolute;
   top: 12px;
   right: 12px;
-  z-index: 999;
+  z-index: 9;
 `;
 
 const ProductInfo = styled.div`

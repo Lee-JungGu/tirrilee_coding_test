@@ -77,6 +77,7 @@ const Warpper = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #fcfcfc;
+  overflow: hidde;
 `;
 
 const Logo = styled.h1`

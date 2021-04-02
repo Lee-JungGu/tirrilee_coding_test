@@ -14,7 +14,6 @@ export default function ProductListPage() {
       } = await axios.post("/api/product/get");
       setProducts(productInfo);
     };
-
     getProducts();
   }, []);
   return (
@@ -173,6 +172,7 @@ const NavigationBar = styled.nav`
   background-color: #fff;
   position: fixed;
   bottom: 0;
+  z-index: 999;
 `;
 
 const UnOrderList = styled.ul`
