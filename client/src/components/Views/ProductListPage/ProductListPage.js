@@ -11,7 +11,7 @@ export default function ProductListPage() {
     const getProducts = async () => {
       const {
         data: { productInfo },
-      } = await axios.post("/api/product/get");
+      } = await axios.get("/api/product/get");
       setProducts(productInfo);
     };
     getProducts();

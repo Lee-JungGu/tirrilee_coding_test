@@ -93,7 +93,7 @@ app.post("/api/product/add", (req, res) => {
   });
 });
 
-app.post("/api/product/get", (req, res) => {
+app.get("/api/product/get", (req, res) => {
   Product.find((err, productInfo) => {
     if (err) return res.json({ success: false, err });
     return res.status(200).json({ productInfo });
